@@ -1,0 +1,22 @@
+{
+  "Galaxy S24": {
+    "deviceName":"Galaxy S24",
+    "platformName": "android",
+    "platformVersion": "14",
+    "app": "lt://APP10160232441754931997241446"
+  },
+
+  "iPhone 15 Pro": {
+    "deviceName":"iPhone 15 Pro",
+    "platformName": "ios",
+    "platformVersion": "17",
+    "app": "lt://APP10160572041754932035940687"
+  },
+
+  "iPhone 12 Pro": {
+    "deviceName":"iPhone 12 Pro",
+    "platformName": "ios",
+    "platformVersion": "16",
+    "app": "lt://APP10160572041754932035940687"
+  }
+}

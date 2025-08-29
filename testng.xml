@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+    <test name="Test on IOS">
+        <parameter name="deviceName" value="iPhone 15 Pro"></parameter>
+        <classes>
+            <class name="runners.TestNGRunnerTest"></class>
+        </classes>
+    </test>
+
+<!--    <test name="Test on Android">-->
+<!--        <parameter name="deviceName" value="Galaxy S24"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="runners.TestNGRunnerTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
