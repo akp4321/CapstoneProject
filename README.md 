@@ -20,4 +20,4 @@ This project uses:
 - Failure screenshots can be seen in root/screenshots folder
 
 ## Reports
-- To see the generated report, go to root/target/cucumber-reports.html
+- To see the extent generated report, go to root/ExtentReports
