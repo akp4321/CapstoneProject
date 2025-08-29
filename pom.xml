@@ -10,76 +10,123 @@
   <name>CapstoneProject_20389564</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java-client.version>9.5.0</java-client.version>
+        <cucumber.version>7.20.1</cucumber.version>
+        <extentreports.cucumber7.adapter.version>1.14.0</extentreports.cucumber7.adapter.version>
+        <extentreports.version>5.1.1</extentreports.version>
+        <selenium.version>4.34.0</selenium.version>
+        <json.version>20211205</json.version>
+        <io.version>2.20.0</io.version>
+        <dataTable.version>7.27.2</dataTable.version>
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.2.1</maven.surefire.plugin.version>
+        <maven.compiler.source.version>17</maven.compiler.source.version>
+        <maven.compiler.target.version>17</maven.compiler.target.version>
+    </properties>
 
     <dependencies>
-      <dependency>
-        <groupId>io.appium</groupId>
-        <artifactId>java-client</artifactId>
-        <version>9.5.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-        <version>20211205</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-remote-driver</artifactId>
-        <version>4.34.0</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.34.0</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-api</artifactId>
-        <version>4.34.0</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-support</artifactId>
-        <version>4.34.0</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-      <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-java</artifactId>
-        <version>7.20.1</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-      <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-testng</artifactId>
-        <version>7.20.1</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-      <dependency>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.5.2</version>
-      </dependency>
-      <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-      <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>2.20.0</version>
-      </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/datatable -->
+
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${java-client.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- Cucumber ExtentReport Adapter -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>${extentreports.cucumber7.adapter.version}</version>
+        </dependency>
+
+        <!-- Extent Report -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>4.34.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>4.34.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>4.34.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${json.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${io.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>datatable</artifactId>
-            <version>7.27.2</version>
+            <version>${dataTable.version}</version>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source.version}</source>
+                    <target>${maven.compiler.target.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

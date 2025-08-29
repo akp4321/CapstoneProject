@@ -14,8 +14,7 @@ import utils.JsonReader;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepdefs","hooks"},
-        plugin = {"pretty", "html:target/cucumber-reports.html"
-        },
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
         tags = "@prod"
 )

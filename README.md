@@ -20,6 +20,6 @@ This project uses:
 - Failure screenshots can be seen in root/screenshots folder
 
 ## Reports
-- To see the generated report, go to root/target/cucumber-reports.html
+- To see the generated report, go to root/ExtentReports
 
 ## Sample output folder has been created and sample images for pass and fail scenario has been added 
