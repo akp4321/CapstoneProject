@@ -80,20 +80,6 @@
             <artifactId>datatable</artifactId>
             <version>7.27.2</version>
         </dependency>
-
-<!--    &lt;!&ndash; ExtentReports Adapter &ndash;&gt;-->
-<!--    <dependency>-->
-<!--        <groupId>tech.grasshopper</groupId>-->
-<!--        <artifactId>extentreports-cucumber7-adapter</artifactId>-->
-<!--        <version>1.10.0</version>-->
-<!--    </dependency>-->
-
-    <!-- Optional: Core ExtentReports -->
-    <dependency>
-        <groupId>com.aventstack</groupId>
-        <artifactId>extentreports</artifactId>
-        <version>5.1.1</version>
-    </dependency>
     </dependencies>
 
 </project>
