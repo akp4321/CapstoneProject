@@ -5,11 +5,12 @@ This project uses:
 - Maven
 - Cucumber 7
 - TestNG
-- LambdaTest for execution
+- LambdaTest for execution, supports parallel execution
 
 ## How to Run
-- Go to testNg.xml file and run it from there byy right clicking and run as .xml
-- Go to edit configuration of intellij and add the configuration of testNG, set the path and click run
+- Add your Lamdatest cred in config.properties present at src/main/resources/config.properties
+- Go to testNg.xml file and run it from there by right clicking and run as .xml
+- Click add configuration in intellij and add the configuration of testNG, set the path and click run
 - If want to run via terminal and maven installed in system, use this command mvn test -Dcucumber.filter.tags="@yourTag"
 
 ## external files
